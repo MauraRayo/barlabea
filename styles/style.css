@@ -1,34 +1,55 @@
 :root{
+    --colorPrincipal: #BC4749;
+    --colorPrincipalClaro: #eda1a2;
+    --colorPrincipalOscuro: #83282a;
+
+    --colorContraste: #6A994E;
+    --colorContrasteOscuro: #386641;
+    --colorContrasteClaro: #A7C957;
+
+    --fondoClaro: #f6f0f0;
+    --fondoOscuro: #cccbcb;
+
+    --fuenteSerif:"Garamond";
+    --fuenteSans:"Helvetica";
+
+    --paddingGeneral: 10px;
 
 }
 
 *{
     margin: 0;
     padding: 0;
+    font-family: var(--fuenteSans);
 }
 
 
 /* Estilos de la cabecera */
 header{
-    background-color: rgb(243, 159, 129);
-    height: 320px;
+    background-color: var(--colorPrincipalClaro);
+    height: 150px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    padding: var(--paddingGeneral);
 }
 
 #cabecera_izq{
-    background-color: #a8e6e8;
     width: 120px;
     height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
 
 
 
 }
 #cabecera_cen{
-    background-color: #9bf3f3;
     width: 100%;
     height: 100%;
 
@@ -39,8 +60,30 @@ header{
     
 }
 #cabecera_der{
-    background-color: #adeded;
     width: 120px;
     height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
     
+    
+}
+
+header h1{
+    font-size: 72px;
+    color: var(--colorPrincipalOscuro);
+    font-family: var(--fuenteSerif);
+}
+header h2{
+    font-size: 25px;
+    color: var(--colorPrincipalOscuro);
+    font-family: var(--fuenteSerif);
+
+}
+
+#cabecera_der img{
+    margin: 0 0 0 var(--paddingGeneral) ;
+
 }
