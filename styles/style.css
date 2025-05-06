@@ -14,9 +14,13 @@
     --fuenteSans:"Helvetica";
 
     --paddingGeneral: 10px;
-
+    
     --altoBtnMenu: 40px;
-    --anchoBtnMenu: 200px
+    --anchoBtnMenu: 200px;
+
+    --alturaCabecera: 120px;
+
+    --alturaPie: 80px;
 
 }
 
@@ -27,16 +31,17 @@
 }
 
 
-/* ESTILO DE LA CABECERA */
+/* ----------------- ESTILO DE LA CABECERA -----------------*/
 header{
     background-color: var(--colorPrincipalClaro);
-    height: 150px;
-    min-width: 800px;
+    height: var(--alturaCabecera);
+    min-width: calc( 4 * var(--anchoBtnMenu)) ;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     padding: var(--paddingGeneral);
 }
 
@@ -62,7 +67,7 @@ header{
 }
 
 #cabecera_der{
-    width: 120px;
+    width: 320px;
     height: 100%;
 
     display: flex;
@@ -78,7 +83,7 @@ header h1{
 }
 
 header h2{
-    font-size: 25px;
+    font-size: 24px;
     color: var(--colorPrincipalOscuro);
     font-family: var(--fuenteSerif);
 }
@@ -91,7 +96,7 @@ header h2{
 
 nav{
     background-color: var(--colorPrincipalOscuro);
-    min-width: calc(800px - 20px);
+    min-width: calc(4 * var(--anchoBtnMenu) + 2 * var(--paddingGeneral));
 }
 
 nav ul{
@@ -119,7 +124,7 @@ nav a{
     line-height: var(--altoBtnMenu);
     vertical-align: middle;
 
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bolder;
     text-decoration: none;
 }
@@ -139,5 +144,23 @@ nav a:active{
 
 }
 
+/* ----------------- CUERPO DE LA PAGINA ----------------- */
+main{
+    background-color: var(--fondoOscuro);
+    min-height: calc(100vh - var(--alturaCabecera) - var(--altoBtnMenu) - var(--alturaPie) - 4 * var(--paddingGeneral));
+    padding: 10px;
 
+}
+
+section{
+    background-color: var(--fondoClaro);
+    padding: 10px;
+}
+
+/* ----------------- PIE DE LA PAGINA ----------------- */
+footer{
+    height: var(--alturaPie);
+    padding: var(--paddingGeneral);
+    background-color: var(--colorPrincipalOscuro);
+}
 
