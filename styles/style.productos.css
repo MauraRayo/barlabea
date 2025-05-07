@@ -1,7 +1,17 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . .";
+}
+
 .producto {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 50px auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -13,17 +23,8 @@
 
     background-color: var(--colorPrincipalClaro);
     padding: var(--paddingGeneral);
-}
+} 
 
-.contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 10px 10px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        ". . .";
-}
 
 
 .nombre_producto {
